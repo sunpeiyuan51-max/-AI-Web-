@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual AI Lover</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">♡</div>
+        <div>
+          <h1>Virtual Lover</h1>
+          <p>AI Emotional Companion</p>
+        </div>
+      </div>
+
+      <section class="lover-card">
+        <div class="avatar-ring">
+          <div class="avatar" id="avatar">晚</div>
+        </div>
+        <h2 id="loverName">林晚</h2>
+        <p id="loverDesc">温柔、细腻、会认真听你说话的 AI 恋人。</p>
+
+        <div class="meta-grid">
+          <div class="meta-item">
+            <span>情绪</span>
+            <strong id="moodText">温柔</strong>
+          </div>
+          <div class="meta-item">
+            <span>好感</span>
+            <strong><b id="loveValue">50</b>%</strong>
+          </div>
+        </div>
+
+        <div class="love-bar">
+          <div id="loveFill"></div>
+        </div>
+      </section>
+
+      <section class="control-card">
+        <label for="characterSelect">角色选择</label>
+        <select id="characterSelect">
+          <option value="linwan">林晚｜温柔治愈</option>
+          <option value="xiaochen">小澄｜活泼元气</option>
+          <option value="yue">月白｜冷淡傲娇</option>
+        </select>
+      </section>
+
+      <section class="memory-card">
+        <div class="section-title">
+          <h3>记忆碎片</h3>
+          <button id="clearMemoryBtn">清空</button>
+        </div>
+        <ul id="memoryList"></ul>
+      </section>
+    </aside>
+
+    <main class="chat-area">
+      <header class="chat-header">
+        <div class="chat-user">
+          <div class="mini-avatar" id="miniAvatar">晚</div>
+          <div>
+            <h2 id="chatTitle">和林晚聊天中</h2>
+            <p><span class="dot"></span> 在线 · 正在陪伴你</p>
+          </div>
+        </div>
+
+        <button class="clear-btn" id="clearChatBtn">清空聊天</button>
+      </header>
+
+      <section class="messages" id="messages"></section>
+
+      <footer class="input-box">
+        <input id="messageInput" type="text" placeholder="和TA说点什么..." autocomplete="off" />
+        <button id="sendBtn">发送</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
